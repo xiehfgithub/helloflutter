@@ -2,7 +2,7 @@
  * @Author: haifeng_xie haifeng_xie@kingdee.com
  * @Date: 2025-02-12 10:15:56
  * @LastEditors: haifeng_xie haifeng_xie@kingdee.com
- * @LastEditTime: 2025-02-12 18:49:30
+ * @LastEditTime: 2025-02-13 16:57:19
  * @FilePath: \helloflutter\lib\my.dart
  * @Description: 路由页——我的
  */
@@ -15,7 +15,6 @@ class LoginRoute extends StatelessWidget {
   final String content;
   const LoginRoute({super.key, required this.content});
 
-  String get s => "“默认”";
 
   @override
   Widget build(BuildContext context) {
@@ -23,23 +22,25 @@ class LoginRoute extends StatelessWidget {
       appBar: AppBar(
         title: const Text('登录'),
         centerTitle: true,
+        backgroundColor: Colors.amber,
       ),
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
           Center(
             child: ElevatedButton(
                 onPressed: () {
                   print("「Login」点击跳转 >>> 「My」");
-                  print("「Login」接收到「My」路由传入数据: " + content);
+                  print("「Login」接收到「My」路由传入数据: $content");
                   Navigator.pop(context, "data <—— 「My」返回参数FED");
                   
                 },
-              // child: const Text('返回我的页面 !'),
-              child: const ItemWidget(myParam: "myParam参数"),
+              child: const Text('返回我的页面 !'),
+              // child: const ItemWidget(myParam: "myParam参数"),
               ),
             
           ),
+          ItemWidget(myParam: "$content"),
           // Center(
           //   child: ElevatedButton(
           //     onPressed:  () async {

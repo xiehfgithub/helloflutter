@@ -80,6 +80,7 @@ class _MyHomePageState extends State<MyHomePage> {
     // than having to individually change instances of widgets.
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         // TRY THIS: Try changing the color here to a specific color (to
         // Colors.amber, perhaps?) and trigger a hot reload to see the AppBar
         // change color while the other colors stay the same.
@@ -121,7 +122,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 print('主页点击跳转 >>> 我的页面!');
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const MyRoute(content: "data ——> 主页传递参数ABC")),
+                  MaterialPageRoute(builder: (context) => MyRoute(content: "data ——> 主页传递参数ABC")),
                 );
               },
               child: Text(

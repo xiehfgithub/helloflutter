@@ -2,7 +2,7 @@
  * @Author: haifeng_xie haifeng_xie@kingdee.com
  * @Date: 2025-02-12 10:15:56
  * @LastEditors: haifeng_xie haifeng_xie@kingdee.com
- * @LastEditTime: 2025-02-12 18:31:39
+ * @LastEditTime: 2025-02-26 10:53:46
  * @FilePath: \helloflutter\lib\my.dart
  * @Description: 路由页——登录
  */
@@ -27,7 +27,7 @@ class _LoginRouteState extends State<LoginRoute> {
 
   const _LoginRouteState();
 
-  let String data;
+  String data;
   @override
   void initState() {
     super.initState();
@@ -56,7 +56,7 @@ class _LoginRouteState extends State<LoginRoute> {
         ]
       )
     );
-    return Scaffold(
+    /* return Scaffold(
       appBar: AppBar(
         leading: Builder(builder: (context) {
           return IconButton(
@@ -102,7 +102,7 @@ class _LoginRouteState extends State<LoginRoute> {
         // onTap: _onItemTapped,
       ),
 
-    );
+    ); */
   }
 
   // void _onItemTapped() {
